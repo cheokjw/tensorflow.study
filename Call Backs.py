@@ -14,7 +14,7 @@ class myCallBack(Callback):
 callbacks = myCallBack()
 
 # As usual, handle data, create neural network, train, evaluate
-# But the different part is
+# But the different part is the call back statement where it stops the training when the model's accuracy reached a certain value. 
 
-model.fit(training_images, training_labels, epochs = 50, callbacks = [calllbacks])
+model.fit(training_images, training_labels, epochs = 50, callbacks = [callbacks])
 
