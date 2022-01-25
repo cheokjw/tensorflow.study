@@ -1,4 +1,8 @@
-x = 2
+import tensorflow as tf 
+from tensorflow.keras import callbacks
 
-if(x == 2):
-    print(x)
+class myCallBack(callbacks):
+    def on_epoch_end(self, epoch, logs = {}):
+        if (logs.get('accuracy') > 0.95):
+            self.model.stop_training = True
+            
